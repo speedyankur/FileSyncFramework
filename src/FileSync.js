@@ -17,8 +17,11 @@ function FileSyncService(){
 
 FileSyncService.prototype.startDownloadProcess = function(progressCallback, successCallback, errorCallback){
   async.eachSeries(this.getFilesToDownload(), function (file, doneCallback) {
-    progressCallback();
-    doneCallback(null);
+    setTimeout(function(){
+      progressCallback();
+      doneCallback(null);
+    },1000);
+
   },function(){
     //We are done with download process so its time to call the successCallback
     successCallback();

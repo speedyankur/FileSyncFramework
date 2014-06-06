@@ -1,7 +1,9 @@
 # FileSync.js
-=================
+===
 
-FileSync is a utility library to download and store files on local system using HTML5 File API. This can be used within your existing for Chrome App(s), using this utility once can easily download a list of files(any files png,jpeg,html,css,js) and later on view them locally in offline mode.
+FileSync is a utility library to download file and store them on local system using HTML5 File API. 
+
+This can be used within your existing for Chrome App(s), using this utility once can easily download a list of files(png,jpeg,html,css,js, any file format) and later on use them inside your app in offline mode.
 
 
 
@@ -20,7 +22,6 @@ FileSync is a utility library to download and store files on local system using 
     }
 
   ];
-  
   
   //create fileSyncService obj
   var fileSyncService = new FileSyncService();
@@ -45,6 +46,7 @@ FileSync is a utility library to download and store files on local system using 
   }, function(e){
   
   	//this error callback, it will be called when any error occurs while downloading and creating files.
+  	
   })
 
     

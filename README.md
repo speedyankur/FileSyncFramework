@@ -36,13 +36,14 @@ FileSync is a utility library to download and store files on local system using 
   //Now lets start the download process
   fileSyncService.startDownloadProcess(function(filesDownloaded){
   	
-  	//this progress callback, it will be called after file is dowloaded and created in local filesystem
+  	//this is progress callback, it will be called after each file is dowloaded and created in local filesystem
   	
   }, function(){
   
-  	//this success callback, it will be called when all the files are downloaded and created in local system  
+  	//this is success callback, it will be called when all the files are downloaded and created in local system  
   	
   }, function(e){
+  
   	//this error callback, it will be called when any error occurs while downloading and creating files.
   })
 

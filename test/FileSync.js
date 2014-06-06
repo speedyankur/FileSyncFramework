@@ -7,12 +7,12 @@ describe('Service: Filesyncservice', function () {
 
   var filesToDownload = [
     {
-      sourceUrl: "",
-      localPath: ""
+      sourceUrl: "http://www.html5rocks.com/static/images/google_logo_small.png",
+      localPath: "/image1/google_logo_small.png"
     },
     {
-      sourceUrl: "",
-      localPath: ""
+      sourceUrl: "http://www.html5rocks.com/static/images/google_logo_small.png",
+      localPath: "/image2/google_logo_small.png"
     }
 
   ];
@@ -23,8 +23,8 @@ describe('Service: Filesyncservice', function () {
         //this is success callback
         console.log("success callback called");
       },
-      errorCallback: function () {
-        console.log("error callback called");
+      errorCallback: function (e) {
+        console.log("error callback called : "+ e.message);
 
       },
       progressCallback: function () {
@@ -34,15 +34,13 @@ describe('Service: Filesyncservice', function () {
     };
 
     spyOn(callbacks, 'successCallback').andCallThrough();
-    ;
     spyOn(callbacks, 'progressCallback').andCallThrough();
-    ;
     spyOn(callbacks, 'errorCallback').andCallThrough();
-    ;
 
     fileSyncService = new FileSyncService();
     fileSyncService.setFilesToDownload(filesToDownload);
-
+    fileSyncService.setStorageType(FileSyncService.storageTypes.TEMPORARY);
+    fileSyncService.setStorageQuota(1024*1024);
   });
 
 

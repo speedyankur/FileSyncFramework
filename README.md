@@ -47,9 +47,20 @@ This can be used within your existing for Chrome App(s), using this utility once
   
   	//this error callback, it will be called when any error occurs while downloading and creating files.
   	
-  })
-
-    
-    
+  });
 ```
 
+
+
+## Steps to run the test cases
+
+```
+//This will install all of your required node modules like (karma,karma-chrome-launcher etc)
+$ npm install
+
+// To start karma server
+$ karma start
+
+// To run test cases
+$ karma run
+```

@@ -1,0 +1,30 @@
+{
+  "name": "FileSyncFramework",
+  "version": "0.1.0",
+  "homepage": "https://github.com/speedyankur/FileSyncFramework",
+  "authors": [
+    "ankur garha <speedyankur@gmail.com>"
+  ],
+  "description": "FileSync is a utility library to download file and store them on local system using HTML5 File API. This can be used within your existing for Chrome App(s), using this utility once can easily download a list of files(png,jpeg,html,css,js, any file format) and later on use them inside your app in offline mode.",
+  "main": "src/FileSync.js",
+  "keywords": [
+    "HTML5",
+    "file",
+    "sync",
+    "filesync",
+    "File",
+    "API",
+    "download",
+    "files",
+    "file",
+    "storage"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
